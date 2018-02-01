@@ -1,0 +1,33 @@
+extends layout
+
+block body
+  div(ng-controller='AppCtrl').container-narrow
+    .masthead
+      ul.nav.nav-pills.pull-right
+        li(ng-class="getClass('/home')")
+          a(href='home') Home
+        li(ng-class="getClass('/about')")
+          a(href='about') About
+        li.dropdown
+          a.dropdown-toggle(data-toggle='dropdown', ng-href="{{ currentLocation() }}") Sign in
+            b.caret
+          ul.dropdown-menu
+            li
+              a(href="login") Log in
+            li
+              a(href="") Register
+
+      h3.muted Lean 35
+      hr
+      div(ng-view)
+    .footer
+        p © Company 2013
+
+  script(src='js/lib/angular/angular.js')
+  script(src='js/lib/jquery/jquery-1.9.1.js')
+  script(src='js/lib/bootstrap/bootstrap.js')
+  script(src='js/app.js')
+  script(src='js/services.js')
+  script(src='js/controllers.js')
+  script(src='js/filters.js')
+  script(src='js/directives.js')

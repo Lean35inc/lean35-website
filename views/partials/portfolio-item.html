@@ -1,0 +1,85 @@
+
+    <link rel="stylesheet" href="/css/portfolio-item.css" type="text/css" media="screen" />
+    <style>
+        .big.iphone {
+            height: 450px !important;
+             
+        }
+
+        .big.monitor{
+            height: 350px !important;
+        }
+
+    </style>
+
+    <div id="portfolio_tem">
+        <div class="container">
+            <div class="section_header">
+                <h3 ng-bind="PortfolioItem.Title"></h3>
+            </div>
+
+            <div data-ng-show="IsNotVideo"> 
+                <div class="span7 left_box">
+                    <div class="big" ng-class="PortfolioItem.BigClass">
+                        <div ng-repeat="url in PortfolioItem.ImagesUrls">
+                            <img ng-src="{{url}}"/>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <br/>
+                    <div class="thumbs">
+                        <div class="thumb" ng-repeat="url in PortfolioItem.ThumbsUrls">
+                            <img ng-src="{{url}}">
+                            <a href="#" class="mask">
+                                <div class="more">+</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span5 right_box">
+                    <h2 ng-bind="PortfolioItem.FullName"></h2>
+                    <p ng-bind="PortfolioItem.Description"></p>
+                </div>
+            </div>
+
+            <div data-ng-show="!IsNotVideo"> 
+                <iframe data-ng-src="{{PortfolioItem.Src}}" style="width: 100%; height: 530px;" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" id="fitvid898676"></iframe>
+            </div>
+
+            <!-- <div data-ng-show="IsNotVideo == false">
+                <div>
+                    <iframe data-ng-src="PortfolioItem.Src" style="width: 100%; height: 515px;" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" id="fitvid898676"></iframe>
+                </div>
+            </div> -->
+            <!-- <div data-ng-show="PortfolioItem.Title == 'Lean Startup Machine'">
+                <div>
+                    <iframe src="//fast.wistia.net/embed/iframe/hirrkbolkh" style="width: 100%; height: 515px;" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" id="fitvid898676"></iframe>
+                </div>
+            </div>
+
+
+            <div data-ng-show="PortfolioItem.Title == 'ChartPath'">
+                <div>
+                    <iframe src="//fast.wistia.net/embed/iframe/68hjxju8p7" style="width: 100%; height: 515px;" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" id="fitvid493725"></iframe>
+                </div>
+            </div>
+
+            <div data-ng-show="PortfolioItem.Title == 'Nissan LEAF on Raceday'">
+                <div>
+                    <iframe src="http://fast.wistia.net/embed/iframe/2edlfmb7cn" style="width: 100%; height: 515px;" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" id="fitvid740768"></iframe>
+                </div>
+            </div>
+
+            <div data-ng-show="PortfolioItem.Title == 'Shoeboxed.com'">
+                <div>
+                    <iframe src="http://fast.wistia.net/embed/iframe/3noyx6wbq5" style="width: 100%; height: 515px;" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" id="fitvid292652"></iframe>
+                </div>
+            </div> -->
+        </div>
+
+        
+    </div>
+
+    <!-- footer -->
+    <div ng-include="'/templates/footer-info'"></div>

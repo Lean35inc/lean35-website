@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="css/contact.css" type="text/css" media="screen" />
+
+    <div id="contact">
+        <div class="container">
+            <div class="section_header">
+                <h3>Get in touch</h3>
+            </div>
+            <div class="row contact">
+                <p>
+                    We’d love to hear from you. Interested in working together? Fill out the form below with some info.
+                </p>
+
+                <form ng-submit="submit()" ng-controller="ContactCtrl">
+                    <div class="row form">
+                        <div class="span6 box">
+                            <input class="name" type="text" placeholder="Name" ng-model='ticket.name'>
+                            <input class="mail" type="text" placeholder="Email" ng-model='ticket.email'>
+                            <input class="phone" type="text" placeholder="Phone" ng-model='ticket.phone'>
+                        </div>
+                        <div class="span6 box box_r">
+                            <textarea placeholder="Type a message here..." ng-model='ticket.message'></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row submit">
+                        <div class="span5 box">
+<!--                             <label class="checkbox">
+                                <input type="checkbox"> Sign up for newsletter
+                            </label>
+ -->                        </div>
+                        <div class="span3 right">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- <div class="row map">
+            <div class="container">
+                <div class="span5 box_wrapp">
+                    <div class="box_cont">
+                        <div class="head">
+                            <h6>Contact</h6>
+                        </div>
+                        <ul class="street">
+                            <li>8420 Charmed Days</li>
+                            <li>Laurel, MD 20723</li>
+                            <li>United States</li>
+                            <li class="icon icontop">
+                                <span class="contacticos ico1"></span>
+                                <span class="text">1 240 447 2441</span>
+                            </li>
+                            <li class="icon">
+                                <span class="contacticos ico2"></span>
+                                <a class="text" href="#">dailychoices@lean35.com</a>
+                            </li>
+                        </ul>
+
+                        <div class="head headbottom">
+                            <h6>Work with us</h6>
+                        </div>
+                        <p>We’ve prepared a simple project planner to get to know you and your project better.</p>
+
+                        <a href="#" class="btn">Let's get started</a>
+                    </div>
+                </div>
+            </div>
+            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.mx/?ie=UTF8&amp;ll=39.139102,-76.859668&amp;spn=0.045157,0.15398&amp;t=m&amp;z=13&amp;output=embed"></iframe>
+        </div> -->
+    </div>
+
+    <!-- footer -->
+    <div ng-include="'/templates/footer-info'"></div>
